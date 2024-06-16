@@ -21,7 +21,7 @@
           "@listener": "./src/app/common/redux/listener.ts",
           "@animated": "./src/app/common/animated",
           "@config": "./src/app/config",
-          "@features": "./src/app/features",
+          "@screens": "./src/app/screens",
           "@components": "./src/app/library/components",
           "@rn-core": "./src/app/library/components/core",
           "@networking": "./src/app/library/networking",

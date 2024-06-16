@@ -18,7 +18,7 @@ export enum APP_SCREEN {
   //home stack
   HOME_STACK = 'HOME_STACK',
   HOME = 'HOME',
-  REVENUES = 'REVENUES',
+  INFO = 'INFO',
   MENU = 'MENU',
   IDOL = 'IDOL',
   AGENCY = 'AGENCY',
@@ -72,7 +72,10 @@ export type UnAuthorizeParamsList = {
 
 export type AuthorizeParamsList = {
   [APP_SCREEN.HOME]: undefined;
-  [APP_SCREEN.REVENUES]: undefined;
+  [APP_SCREEN.INFO]: {
+    peripheralData: any,
+    peripheral: any
+  };
   [APP_SCREEN.MENU]: undefined;
   [APP_SCREEN.IDOL]: undefined;
   [APP_SCREEN.AGENCY]: undefined;

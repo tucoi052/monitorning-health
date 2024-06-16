@@ -18,7 +18,7 @@
       "@listener": ["./src/app/common/redux/listener.ts"],
       "@animated": ["./src/app/common/animated/index"],
       "@config/*": ["./src/app/config/*"],
-      "@features/*": ["src/app/screens/*"],
+      "@screens/*": ["src/app/screens/*"],
       "@components": ["./src/app/library/components/index"],
       "@components/*": ["./src/app/library/components/*"],
       "@rn-core": ["src/app/library/components/core/index"],

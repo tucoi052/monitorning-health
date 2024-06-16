@@ -34,11 +34,19 @@ export const styleSheet = createStyleSheet(theme => ({
     backgroundColor: theme.color.background,
   },
   item: {
-    marginLeft: 10,
-    marginRight: 10,
-    borderRadius: 20,
+    flex: 1,
+    width: '100%',
+    marginHorizontal: 5,
+    paddingVertical: 20,
+    borderRadius: 10,
+    alignItems: 'center',
     backgroundColor: theme.color.info200,
-
+  },
+  itemTitle: {
+    ...theme.textPresets.subtitle2,
+  },
+  itemValue: {
+    ...theme.textPresets.paragraphBold,
   },
   peripheralName: {
     fontSize: 16,

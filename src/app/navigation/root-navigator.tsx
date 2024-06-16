@@ -6,9 +6,8 @@ import { useSelector } from 'react-redux';
 import { APP_SCREEN, RootStackParamList } from '@navigation/screen-types';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { selectAppToken } from '@redux-selector/app';
-
-import { Home } from '../screens/home';
-import { Login } from '../screens/un-authen/login';
+import { Home } from '@screens/home';
+import { Info } from '@screens/info';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
@@ -26,19 +25,10 @@ export const RootNavigation = () => {
   // render
   return (
     <RootStack.Navigator screenOptions={{ headerShown: false }}>
-      {token === undefined ? (
-        <RootStack.Group
-          screenOptions={{
-            freezeOnBlur: true,
-          }}>
-          <RootStack.Screen name={APP_SCREEN.LOGIN} component={Login} />
-          <RootStack.Screen name={APP_SCREEN.HOME} component={Home} />
-        </RootStack.Group>
-      ) : (
-        <RootStack.Group>
-          <RootStack.Screen name={APP_SCREEN.HOME} component={Home} />
-        </RootStack.Group>
-      )}
+      <RootStack.Group>
+        <RootStack.Screen name={APP_SCREEN.HOME} component={Home} />
+        <RootStack.Screen name={APP_SCREEN.INFO} component={Info} />
+      </RootStack.Group>
     </RootStack.Navigator>
   );
 };

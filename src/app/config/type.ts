@@ -22,6 +22,7 @@ export enum SLICE_NAME {
   APP = 'APP_',
   AUTHENTICATION = 'AUTHENTICATION_',
   USER = 'USER_',
+  BLE = 'BLE_',
   MESSAGE = 'MESSAGE_',
   POPULAR = 'POPULAR_',
   SOUND = 'SOUND_',

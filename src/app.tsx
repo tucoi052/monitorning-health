@@ -12,6 +12,13 @@ import { AppContainer } from '@navigation/app-navigation';
 import { store } from '@store/store';
 import I18n from '@utils/i18n/i18n';
 
+declare module 'react-native-ble-manager' {
+  interface Peripheral {
+    connected?: boolean;
+    connecting?: boolean;
+  }
+}
+
 const styles = StyleSheet.create({
   root: {
     flex: 1,
