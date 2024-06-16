@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["es2021", "dom"],
+    "allowJs": true,
+    "jsx": "react-native",
+    "noEmit": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["./src/app/assets/*"],
+      "@common": ["./src/app/common/index"],
+      "@hooks": ["./src/app/common/hooks/index"],
+      "@listener": ["./src/app/common/redux/listener.ts"],
+      "@animated": ["./src/app/common/animated/index"],
+      "@config/*": ["./src/app/config/*"],
+      "@features/*": ["src/app/screens/*"],
+      "@components": ["./src/app/library/components/index"],
+      "@components/*": ["./src/app/library/components/*"],
+      "@rn-core": ["src/app/library/components/core/index"],
+      "@utils/*": ["./src/app/library/utils/*"],
+      "@storage": ["./src/app/library/utils/storage/index"],
+      "@model/*": ["./src/app/model/*"],
+      "@navigation/*": ["./src/app/navigation/*"],
+      "@networking": ["./src/app/library/networking/index"],
+      "@networking/*": ["./src/app/library/networking/*"],
+      "@store/*": ["./src/app/redux/store/*"],
+      "@redux-slice": ["./src/app/redux/action-slice/index"],
+      "@redux-selector/*": ["./src/app/redux/selector/*"],
+      "@redux-action-type/*": ["./src/app/redux/action-type/*"],
+      "@theme": ["./src/app/themes/index"],
+      "@theme/*": ["./src/app/themes/*"],
+      "@transition": ["./src/app/transition/index"],
+      "@helper/*": ["./src/app/helper/*"],
+      "*": ["declare/*", "*"]
+    },
+    "typeRoots": ["declare"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}

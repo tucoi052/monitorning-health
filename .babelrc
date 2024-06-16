@@ -1,0 +1,42 @@
+{
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-remove-console"
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./"
+        ],
+        "alias": {
+          "@assets": "./src/app/assets",
+          "@common": "./src/app/common",
+          "@hooks": "./src/app/common/hooks",
+          "@validate": "./src/app/common/zod-validate",
+          "@listener": "./src/app/common/redux/listener.ts",
+          "@animated": "./src/app/common/animated",
+          "@config": "./src/app/config",
+          "@features": "./src/app/features",
+          "@components": "./src/app/library/components",
+          "@rn-core": "./src/app/library/components/core",
+          "@networking": "./src/app/library/networking",
+          "@utils": "./src/app/library/utils",
+          "@storage": "./src/app/library/utils/storage",
+          "@model": "./src/app/model",
+          "@navigation": "./src/app/navigation",
+          "@store": "./src/app/redux/store",
+          "@redux-slice": "./src/app/redux/action-slice",
+          "@redux-selector": "./src/app/redux/selector",
+          "@redux-action-type": "./src/app/redux/action-type",
+          "@theme": "./src/app/themes",
+          "@helper": "./src/app/helper"
+        }
+      }
+    ]
+  ]
+}
