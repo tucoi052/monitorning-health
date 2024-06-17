@@ -1,3 +1,4 @@
+import { HealthEnum } from '@common';
 export enum APP_SCREEN {
   UN_AUTHORIZE = 'UN_AUTHORIZE',
   SPLASH = 'SPLASH',
@@ -19,7 +20,7 @@ export enum APP_SCREEN {
   HOME_STACK = 'HOME_STACK',
   HOME = 'HOME',
   INFO = 'INFO',
-  MENU = 'MENU',
+  DETAIL = 'DETAIL',
   IDOL = 'IDOL',
   AGENCY = 'AGENCY',
   NEWS = 'NEWS',
@@ -73,10 +74,10 @@ export type UnAuthorizeParamsList = {
 export type AuthorizeParamsList = {
   [APP_SCREEN.HOME]: undefined;
   [APP_SCREEN.INFO]: {
-    peripheralData: any,
-    peripheral: any
+    peripheralData: any;
+    peripheral: any;
   };
-  [APP_SCREEN.MENU]: undefined;
+  [APP_SCREEN.DETAIL]: { type?: HealthEnum };
   [APP_SCREEN.IDOL]: undefined;
   [APP_SCREEN.AGENCY]: undefined;
   [APP_SCREEN.NEWS]: undefined;

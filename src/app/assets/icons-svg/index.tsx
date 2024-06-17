@@ -13,7 +13,6 @@ import Back from './back.svg';
 import Check from './check.svg';
 import EyeOff from './eye-off.svg';
 import Eye from './eye.svg';
-import CrossHair from './crosshair.svg';
 import Geo from './geo.svg';
 
 export const BackIcon = (props: SvgProps) => <Back {...props} />;
@@ -26,9 +25,7 @@ export const ArrowUpIcon = (props: SvgProps) => <ArrowUp {...props} />;
 
 export const ArrowDownIcon = (props: SvgProps) => <ArrowDown {...props} />;
 
-export const ArrowRightWhiteIcon = (props: SvgProps) => (
-  <ArrowRightWhite {...props} />
-);
+export const ArrowRightWhiteIcon = (props: SvgProps) => <ArrowRightWhite {...props} />;
 
 export const BackWhiteIcon = (props: SvgProps) => <BackWhite {...props} />;
 
@@ -36,10 +33,6 @@ export const CheckIcon = (props: SvgProps) => <Check {...props} />;
 
 export const EyeIcon = (props: SvgProps) => <Eye color="white" {...props} />;
 
-export const EyeOffIcon = (props: SvgProps) => (
-  <EyeOff color="white" {...props} />
-);
-
-export const CrosHairIcon = (props: SvgProps) => <CrossHair color="white" {...props} />;
+export const EyeOffIcon = (props: SvgProps) => <EyeOff color="white" {...props} />;
 
 export const GeoIcon = (props: SvgProps) => <Geo color="white" {...props} />;

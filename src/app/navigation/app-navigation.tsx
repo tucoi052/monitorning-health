@@ -9,10 +9,7 @@ import { ImageTransition } from '@components/light-box/image-transition';
 import { PortalHost } from '@gorhom/portal';
 import { navigationRef } from '@navigation/navigation-service';
 import { RootNavigation } from '@navigation/root-navigator';
-import {
-  DefaultTheme,
-  NavigationContainer,
-} from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { selectAppConfig } from '@redux-selector/app';
 import { appActions } from '@redux-slice';
 import { useThemeStyles } from '@theme';
@@ -36,20 +33,18 @@ export const AppContainer = () => {
 
   // render
   return (
-    <NavigationContainer ref={navigationRef}
+    <NavigationContainer
+      ref={navigationRef}
       theme={{
         ...DefaultTheme,
         colors: {
           ...DefaultTheme.colors,
           background: theme.color.background,
         },
-      }}>
+      }}
+    >
       <>
-        <StatusBar
-          translucent
-          backgroundColor={'transparent'}
-          barStyle={'dark-content'}
-        />
+        <StatusBar translucent backgroundColor={'transparent'} barStyle={'dark-content'} />
         {!loadingApp && (
           <>
             <RootNavigation />

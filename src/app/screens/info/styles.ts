@@ -16,16 +16,14 @@ const boxShadow = {
   elevation: 5,
 };
 
-export const styleSheet = createStyleSheet(theme => ({
+export const styleSheet = createStyleSheet((theme) => ({
   text: {
     ...theme.textPresets.label,
     color: theme.color.neutral500,
   },
-  header: {
-    ...theme.textPresets.H5,
-    color: theme.color.secondary,
-    textAlign: 'center',
-    paddingBottom: 10
+  flex: {
+    flex: 1,
+    marginTop: 20,
   },
   root: {
     flex: 1,
@@ -42,29 +40,8 @@ export const styleSheet = createStyleSheet(theme => ({
     alignItems: 'center',
     backgroundColor: theme.color.info200,
   },
-  itemTitle: {
-    ...theme.textPresets.subtitle2,
-  },
-  itemValue: {
-    ...theme.textPresets.paragraphBold,
-  },
-  peripheralName: {
-    fontSize: 16,
-    textAlign: 'center',
-    fontFamily: FontDefault.primarySemiBold,
-    padding: 10,
-    ...boxShadow
-  },
-  rssi: {
-    fontSize: 12,
-    textAlign: 'center',
-    padding: 2,
-  },
-  peripheralId: {
-    fontSize: 12,
-    textAlign: 'center',
-    padding: 2,
-    paddingBottom: 20,
+  healthIcon: {
+    width: '100%',
+    height: 150,
   },
 }));
-

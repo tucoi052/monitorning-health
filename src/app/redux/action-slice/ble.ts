@@ -6,7 +6,7 @@ import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState: BleState = {
   loading: false,
-  devices: []
+  devices: [],
 };
 
 const bleSlice = createSlice({
@@ -20,28 +20,17 @@ const bleSlice = createSlice({
   },
 });
 
-const scan = createAction(
-  Action.SCAN,
-  (
-    body?: any,
-    onSucceeded?: () => void,
-    onFailure?: (msg: string) => void,
-  ) => ({
-    payload: {
-      body,
-      onSucceeded,
-      onFailure,
-    },
-  }),
-);
+const scan = createAction(Action.SCAN, (body?: { reScan?: boolean }, onSucceeded?: () => void, onFailure?: (msg: string) => void) => ({
+  payload: {
+    body,
+    onSucceeded,
+    onFailure,
+  },
+}));
 
 const discoverDevice = createAction(
   Action.DISCOVER_DEVICE,
-  (
-    body?: any,
-    onSucceeded?: () => void,
-    onFailure?: (msg: string) => void,
-  ) => ({
+  (body?: any, onSucceeded?: () => void, onFailure?: (msg: string) => void) => ({
     payload: {
       body,
       onSucceeded,
@@ -53,7 +42,7 @@ const discoverDevice = createAction(
 const connectDevice = createAction(
   Action.CONNECT_DEVICE,
   (
-    body?: any,
+    body: { peripheral: Peripheral; nonDelay?: boolean },
     onSucceeded?: () => void,
     onFailure?: (msg: string) => void,
   ) => ({

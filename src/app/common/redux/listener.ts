@@ -26,6 +26,8 @@ export const takeLatestListeners =
         },
       });
     };
+
+
 export const takeLeadingListeners =
   (withLoading?: boolean): StartAppListening =>
     (startListeningOption: any) => {
@@ -80,6 +82,24 @@ export const throttleListeners =
           }
           await listenerApi.delay(msDuration);
           listenerApi.subscribe();
+        },
+      });
+    };
+
+
+export const takeEveryListener =
+  (withLoading?: boolean): StartAppListening =>
+    (startListeningOption: any) => {
+      return startAppListening({
+        ...startListeningOption,
+        effect: async (action, listenerApi) => {
+          if (withLoading) {
+            listenerApi.dispatch(appActions.startProcess());
+          }
+          await startListeningOption.effect(action, listenerApi);
+          if (withLoading) {
+            listenerApi.dispatch(appActions.endProcess());
+          }
         },
       });
     };
